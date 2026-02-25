@@ -1,0 +1,6 @@
+      - name: Deploy Windows VM
+        uses: azure/arm-deploy@v2
+        with:
+          resourceGroupName: 'Portfolio-RG'
+          template: ./windows-vm.bicep
+          parameters: adminPassword=${{ secrets.VM_PASSWORD }}
